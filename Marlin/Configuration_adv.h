@@ -605,7 +605,7 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN  PA8 //%% (Fan 0) Must Comment out Pin in Common.h file for this to work
+#define E0_AUTO_FAN_PIN  PA8 //% (Fan 0) Must Comment out Pin in Common.h file for this to work
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
