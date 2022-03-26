@@ -422,7 +422,7 @@
  * Enable Autotemp Mode with M104/M109 F<factor> S<mintemp> B<maxtemp>.
  * Disable by sending M104/M109 with no F parameter (or F0 with AUTOTEMP_PROPORTIONAL).
  */
-#define AUTOTEMP
+//#define AUTOTEMP
 #if ENABLED(AUTOTEMP)
   #define AUTOTEMP_OLDWEIGHT    0.98  // Factor used to weight previous readings (0.0 < value < 1.0)
   // Turn on AUTOTEMP on M104/M109 by default using proportions set here
@@ -606,23 +606,23 @@
  * the fan will turn on when any selected extruder is above the threshold.
  */
 #define E0_AUTO_FAN_PIN  PA8 //% (Fan 0) Must Comment out Pin in Common.h file for this to work
-#define E1_AUTO_FAN_PIN -1
-#define E2_AUTO_FAN_PIN -1
-#define E3_AUTO_FAN_PIN -1
-#define E4_AUTO_FAN_PIN -1
-#define E5_AUTO_FAN_PIN -1
-#define E6_AUTO_FAN_PIN -1
-#define E7_AUTO_FAN_PIN -1
-#define CHAMBER_AUTO_FAN_PIN -1
-#define COOLER_AUTO_FAN_PIN -1
-#define COOLER_FAN_PIN -1
+// #define E1_AUTO_FAN_PIN -1 //%% All others commented out for testing
+// #define E2_AUTO_FAN_PIN -1
+// #define E3_AUTO_FAN_PIN -1
+// #define E4_AUTO_FAN_PIN -1
+// #define E5_AUTO_FAN_PIN -1
+// #define E6_AUTO_FAN_PIN -1
+// #define E7_AUTO_FAN_PIN -1
+// #define CHAMBER_AUTO_FAN_PIN -1
+// #define COOLER_AUTO_FAN_PIN -1
+// #define COOLER_FAN_PIN -1
 
-#define EXTRUDER_AUTO_FAN_TEMPERATURE 50
+#define EXTRUDER_AUTO_FAN_TEMPERATURE 60
 #define EXTRUDER_AUTO_FAN_SPEED 255   // 255 == full speed
-#define CHAMBER_AUTO_FAN_TEMPERATURE 30
-#define CHAMBER_AUTO_FAN_SPEED 255
-#define COOLER_AUTO_FAN_TEMPERATURE 18
-#define COOLER_AUTO_FAN_SPEED 255
+// #define CHAMBER_AUTO_FAN_TEMPERATURE 30
+// #define CHAMBER_AUTO_FAN_SPEED 255
+// #define COOLER_AUTO_FAN_TEMPERATURE 18
+// #define COOLER_AUTO_FAN_SPEED 255
 
 /**
  * Hotend Cooling Fans tachometers
@@ -1042,7 +1042,7 @@
 #define DISABLE_INACTIVE_I true
 #define DISABLE_INACTIVE_J true
 #define DISABLE_INACTIVE_K true
-#define DISABLE_INACTIVE_E true
+#define DISABLE_INACTIVE_E true 
 
 // Default Minimum Feedrates for printing and travel moves
 #define DEFAULT_MINIMUMFEEDRATE       0.0     // (mm/s) Minimum feedrate. Set with M205 S.
