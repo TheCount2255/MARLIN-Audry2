@@ -69,7 +69,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "TheCount2255 V0.2" // Who made the changes. //%%
+#define STRING_CONFIG_H_AUTHOR "TheCount2255 V0.5" // Who made the changes. //%%
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -710,7 +710,7 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION //%%
-#define EXTRUDE_MINTEMP 170 //%%
+#define EXTRUDE_MINTEMP 190 //%%
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -1341,13 +1341,13 @@
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
 #define INVERT_E0_DIR true
-#define INVERT_E1_DIR false
-#define INVERT_E2_DIR false
-#define INVERT_E3_DIR false
-#define INVERT_E4_DIR false
-#define INVERT_E5_DIR false
-#define INVERT_E6_DIR false
-#define INVERT_E7_DIR false
+// #define INVERT_E1_DIR false //%% disabled all for mem savings
+// #define INVERT_E2_DIR false
+// #define INVERT_E3_DIR false
+// #define INVERT_E4_DIR false
+// #define INVERT_E5_DIR false
+// #define INVERT_E6_DIR false
+// #define INVERT_E7_DIR false
 
 // @section homing
 
@@ -1410,20 +1410,20 @@
   #define MIN_SOFTWARE_ENDSTOP_X
   #define MIN_SOFTWARE_ENDSTOP_Y
   #define MIN_SOFTWARE_ENDSTOP_Z
-  #define MIN_SOFTWARE_ENDSTOP_I
-  #define MIN_SOFTWARE_ENDSTOP_J
-  #define MIN_SOFTWARE_ENDSTOP_K
+  // #define MIN_SOFTWARE_ENDSTOP_I //%% added for memsavings
+  // #define MIN_SOFTWARE_ENDSTOP_J
+  // #define MIN_SOFTWARE_ENDSTOP_K
 #endif
 
 // Max software endstops constrain movement within maximum coordinate bounds
 #define MAX_SOFTWARE_ENDSTOPS
 #if ENABLED(MAX_SOFTWARE_ENDSTOPS)
-  #define MAX_SOFTWARE_ENDSTOP_X
-  #define MAX_SOFTWARE_ENDSTOP_Y
+  #define MAX_SOFTWARE_ENDSTOP_X 
+  #define MAX_SOFTWARE_ENDSTOP_Y 
   #define MAX_SOFTWARE_ENDSTOP_Z
-  #define MAX_SOFTWARE_ENDSTOP_I
-  #define MAX_SOFTWARE_ENDSTOP_J
-  #define MAX_SOFTWARE_ENDSTOP_K
+  // #define MAX_SOFTWARE_ENDSTOP_I //%% added for memsavings
+  // #define MAX_SOFTWARE_ENDSTOP_J
+  // #define MAX_SOFTWARE_ENDSTOP_K
 #endif
 
 #if EITHER(MIN_SOFTWARE_ENDSTOPS, MAX_SOFTWARE_ENDSTOPS)
@@ -1448,7 +1448,7 @@
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
 
-  #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present. //%% Case sensitive (HIGH/LOW)
+  #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present. //%% Case sensitive (HIGH/LOW) 
   #define FIL_RUNOUT_PULLUP               // Use internal pullup for filament runout pins.
   //#define FIL_RUNOUT_PULLDOWN           // Use internal pulldown for filament runout pins.
   //#define WATCH_ALL_RUNOUT_SENSORS      // Execute runout script on any triggering sensor, not only for the active extruder.
@@ -2105,7 +2105,7 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-//#define SDSUPPORT //%% Slot to use defind in ADV (SDCARD_CONNECTION): Will still take update from slot *****NOT COMPATIBLE WITH DUAL Z: M122 will not read Z2*****
+#define SDSUPPORT //%% Slot to use defind in ADV (SDCARD_CONNECTION): Will still take update from slot *****NOT COMPATIBLE WITH DUAL Z: M122 will not read Z2*****
 
 /**
  * SD CARD: ENABLE CRC
